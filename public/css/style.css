@@ -1,0 +1,34 @@
+@font-face {
+    font-family: adobeFont;
+    src: url("../assets/fonts/AdobeFnt23.lst");
+}
+
+@font-face {
+    font-family: letterGothic;
+    src: url("../assets/fonts/LetterGothicStd.otf");
+}
+
+* {
+
+    animation-timing-function: ease-in-out;
+    font-family: letterGothic;
+}
+
+body 
+{
+    text-align: center;
+    margin-top: 20%;
+}
+
+.textblock 
+{
+    position: absolute;
+    text-align: left;
+    width: 400px; 
+    top: 7vh;
+    left: 200px;
+    padding: 10px;
+    border: 5px solid rgb(0, 0, 0);
+    background-color: white;
+    z-index: 1;
+}

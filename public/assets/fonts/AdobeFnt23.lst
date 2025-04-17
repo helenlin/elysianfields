@@ -1,0 +1,38 @@
+%!Adobe-FontList 1.23
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/kathleenma/Documents/projects/2024/ish website/fish website Folder/Document fonts/AdobeFnt23.lst
+FileLength:697
+FileModTime:754690982
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:LetterGothicStd
+FamilyName:Letter Gothic Std
+StyleName:Medium
+MenuName:Letter Gothic Std
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Letter Gothic Std Medium
+WritingScript:Roman
+OutlineFileName:/Users/kathleenma/Documents/projects/2024/ish website/fish website Folder/Document fonts/LetterGothicStd.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:34480
+FileModTime:683841213
+DesignSize:120
+NameArray:0,Mac,18,Letter Gothic Std
+NameArray:0,Mac,4,Letter Gothic Std Medium
+NameArray:0,Win,1,Letter Gothic Std
+%EndFont
+
