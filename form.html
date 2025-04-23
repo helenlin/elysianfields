@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <link rel="stylesheet" type="text/css" href="public/css/style.css">
+          <meta name="viewport" content="width=device-width">
+          <meta name="viewport" content="height=device-height">
+          <title>translate into your own words</title>
+          <link rel="icon" href="favicon.png">
+         <style>
+
+          * {
+            background-color: white;
+            color: black;
+          }
+         </style>
+     </head>
+<body>
+  <h2>elysian fields iv</h2>
+  <br>
+
+  <p>please rewrite in your own native language or words</p>
+  <br><br>
+  <form id="myForm">
+    <label>november peels off the skin of the road   </label>
+    <input type="text" name="sLine1" required><br><br>
+
+    <label>i sweat through a polyp snowfield   </label>
+    <input type="text" name="sLine2" required><br><br>
+
+    <label>which i must annihilate   </label>
+    <input type="text" name="sLine3" required><br><br>
+
+    <label>too much rests on the left spine glowing in the dark   </label>
+    <input type="text" name="sLine4" required><br><br>
+
+    <label>beyond the paling fence   </label>
+    <input type="text" name="sLine5" required><br><br>
+
+    <label>the 2mm hole in the world   </label>
+    <input type="text" name="sLine6" required><br><br>
+
+    <button type="submit">send</button>
+  </form>
+
+  <p id="message"></p>
+
+  <a id="myLink" href="collaborative.html">next page</a>
+
+  <script>
+    const form = document.getElementById('myForm');
+    const message = document.getElementById('message');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      const res = await fetch('/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      const result = await res.json();
+      message.textContent = result.message;
+      form.reset();
+
+    });
+
+  </script>
+</body>
+</html>

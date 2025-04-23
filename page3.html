@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head> 
+       <link rel="stylesheet" type="text/css" href="public/css/style.css">
+         <meta name="viewport" content="width=device-width">
+         <meta name="viewport" content="height=device-height">
+         <title>elysian fields iii</title>
+         <link rel="icon" href="favicon.png">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                transition: background-color 0.3s ease;
+                background-color: blue;
+                color: white;
+            }
+
+
+            
+            
+        </style>
+    </head>
+    
+
+    <body>
+
+        <h2 id="page3Title">elysian fields iii</h2>
+
+        <br><br>
+         
+    <div id="keyWord">a keyword</div>
+
+    <div id="a1" class="textblock">mountains sag</div>
+
+    <div id="a2" class="textblock">out of the sea</div>
+
+    <div id="a3" class="textblock">            stillborn</div>
+
+    <div id="a4" class="textblock"></div>
+
+    <div id="a5" class="textblock">dust yokes to</div>
+
+    <div id="a6" class="textblock">                            exile</div>
+
+    <div id="a7" class="textblock"></div>
+
+    <div id="a8" class="textblock">spectral fog erupts</div>
+
+    <div id="a9" class="textblock">grateful eyes bow</div>
+
+    <div id="a10" class="textblock"></div>
+
+    <div id="a11" class="textblock">november peels me open like an orange</div>
+
+    <div id="a12" class="textblock"></div>
+
+    <div id="a13" class="textblock">i must   annihilate</div>
+
+    <div id="a14" class="textblock">beyond the pale freeze</div>
+
+
+
+    <a id="myLink" href="form.html">next page</a>
+    <script src="public/js/poems.js"></script>
+    <script src="public/js/script.js"></script>
+
+    <script>
+
+
+        changeKeyWord();
+
+        rainKeyword(generateLine(ambients)[2]);
+
+        function changeAllLines() {
+            for (let i = 0; i < allLinesWithHL.length; i++){
+            changeLine(allLinesWithHL[i], "a".concat(i+1));
+            }
+        }
+
+
+        document.addEventListener('click', () => {
+
+            changeAllLines();
+            //clearOldDrops();
+            rainKeyword(generateLine(ambients)[2]);
+
+        });
+
+    </script>
+    </body>
+
+</html>

@@ -27,6 +27,7 @@ const red = ["red", "红色", "赤"]; // 赤 (chì) for red (or 红 hóng, but �
 const hole = ["hole", "洞穴", "洞"]; // 洞 (dòng) for hole  
 const weeping = ["weeping", "哭泣", "泣"]; // 泣 (qì) for weeping (or 哭 kū, but 泣 is more literary)  
 const street = ["street", "街道", "街"]; // 街 (jiē) for street  
+const ambients = [field, mountain, sea, red, hole, weeping, street];
 
 // lines ******************************************
 
@@ -83,13 +84,16 @@ function generateLine(whichLine) {
   return whichLine[Math.floor(Math.random() * whichLine.length)];
 }
 
+const allLines = [line1, line2, line3, line4, line5, line6, line7, 
+  line8, line9, line10, line11, line12, line13, line14];
 
+const allLinesWithHL = [lineHL1, lineHL2, lineHL3, lineHL4, lineHL5, lineHL6, lineHL7,
+  lineHL8, lineHL9, lineHL10, lineHL11, lineHL12, lineHL13, lineHL14
+];
 
-
-
-
-
-changeKeyWord();
+const allLinesENOnly = [lineEN1, lineEN2, lineEN3, lineEN4, lineEN5, lineEN6, lineEN7,
+  lineEN8, lineEN9, lineEN10, lineEN11, lineEN12, lineEN13, lineEN14
+];
 
 function changeKeyWord() {
   const wordDiv = document.getElementById("keyWord");
@@ -97,12 +101,12 @@ function changeKeyWord() {
   if (wordDiv) {
     wordDiv.innerHTML = text;
   }
+  return text;
 }
 
-changeLine(line1);
 
-function changeLine(thisLine) {
-  const lineDiv = document.querySelector('.textblock');
+function changeLine(thisLine, id) {
+  const lineDiv = document.getElementById(id);
   let text = generateLine(thisLine);
   if (lineDiv) {
     lineDiv.innerText = text;

@@ -1,7 +1,3 @@
-@font-face {
-    font-family: adobeFont;
-    src: url("../assets/fonts/AdobeFnt23.lst");
-}
 
 @font-face {
     font-family: letterGothic;
@@ -13,25 +9,108 @@
     animation-timing-function: ease-in-out;
     font-family: letterGothic;
     cursor: text;
-    background-color: #d4d4d4;
+    /* background-color: #d4d4d4; */
+}
+
+a {
+    background-color: yellow;
 }
 
 body 
 {
     text-align: center;
-    margin-top: 20%;
+    margin-top: 10%;
+}
+
+h2 {
+    position: relative;
+    padding-top: 50px;
+}
+
+
+#myLink {
+    color: blue;
+    position: absolute;
+    bottom: 50px;
+}
+
+#footer {
+    padding-bottom: 50px;
 }
 
 .textblock 
 {
-    position: absolute;
+    position: relative;
     text-align: left;
     width: 400px; 
     top: 7vh;
-    left: 200px;
+    left: 10vw;
     padding: 10px;
-    border: 5px solid rgb(0, 0, 0);
-    background-color: white;
     z-index: 1;
     cursor: vertical-text;
 }
+
+
+
+
+.drop {
+    position: absolute;
+    top: -50px;
+    font-size: 20px;
+    opacity: 1;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        opacity: 100;
+    }
+}
+
+.typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: wrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+  .follower {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: yellow;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.05s linear;
+    transform: translate(-50%, -50%);
+  }
+
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      transform: translateY(-10px) scale(0.5);
+    }
+  }
+
+  .pixel {
+    width: 20px;
+    height: 20px;
+    background: transparent;
+  }

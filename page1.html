@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head> 
+       <link rel="stylesheet" type="text/css" href="public/css/style.css">
+         <meta name="viewport" content="width=device-width">
+         <meta name="viewport" content="height=device-height">
+         <title>elysian fields i</title>
+         <link rel="icon" href="favicon.png">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                transition: background-color 0.3s ease;
+            }
+        </style>
+    </head>
+    
+
+    <body>
+
+        <h2 id="page1Title">elysian fields i</h2>
+
+        <br><br>
+         
+    <div id="keyWord">a keyword</div>
+
+    <div id="a1" class="textblock typewriter">november peels off the skin of the road</div>
+
+    <div id="a2" class="textblock typewriter"></div>
+
+    <div id="a3" class="textblock typewriter">i sweat through a polyp snowfield</div>
+
+    <div id="a4" class="textblock typewriter">which i must annihilate</div>
+
+    <div id="a5" class="textblock typewriter"></div>
+
+    <div id="a6" class="textblock typewriter">too much rests on the left spine glowing in the dark</div>
+
+    <div id="a7" class="textblock typewriter"></div>
+
+    <div id="a8" class="textblock typewriter">beyond the paling fence</div>
+
+    <div id="a9" class="textblock typewriter">the 2mm hole in the world</div>
+
+    <div id="a10" class="textblock typewriter"></div>
+
+    <div id="a11" class="textblock typewriter"></div>
+
+    <div id="a12" class="textblock typewriter"></div>
+
+    <div id="a13" class="textblock typewriter"></div>
+
+    <div id="a14" class="textblock typewriter"></div>
+
+
+
+    <a id="myLink" href="page2.html">next page</a>
+
+
+    <script src="public/js/poems.js"></script>
+    <script src="public/js/script.js"></script>
+
+    <script>
+
+        let counter = 0;
+
+        let keyword = changeKeyWord();
+
+        function changeAllLines() {
+            for (let i = 0; i < allLinesENOnly.length; i++){
+            let l = Math.floor();
+            changeLine(allLinesENOnly[i], "a".concat(i+1));
+            }
+        }
+
+        setTimeout(() => {
+
+            document.addEventListener('click', () => {
+                if (counter == 1) {
+                    // document.body.style.backgroundColor = '#d4d4d4';
+
+                }
+                    
+                else if (counter >= 2) {
+                    // document.body.style.backgroundColor = 'white';
+                }
+
+                else {
+                    changeAllLines();
+                }
+
+                counter++;
+            }, 15000);
+        });
+    </script>
+    </body>
+
+</html>
