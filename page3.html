@@ -17,8 +17,8 @@
             }
 
             #myLink {
-                
-                top: 110vh;
+                position: fixed;
+                top: 50px;
                 left: 50px;
             }
             
@@ -89,7 +89,7 @@
         document.addEventListener('click', () => {
 
             changeAllLines();
-            //clearOldDrops();
+            clearOldDrops();
             rainKeyword(generateLine(ambients)[2]);
 
         });

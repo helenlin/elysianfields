@@ -43,8 +43,52 @@
         try {
           const res = await fetch('data.json');
           const data = await res.json();
+          console.log(data);
+
+
+          let item; 
+          let line1 = [], line2 = [], line3 = [], line4 = [], line5 = [], line6 = []; 
   
+          for (let i = 0 ; i < data.length; i++) {
+            item = data[i];
+            line1.push(item.sLine1);
+            line2.push(item.sLine2);
+            line3.push(item.sLine3);
+            line4.push(item.sLine4);
+            line5.push(item.sLine5);
+            line6.push(item.sLine6);
+          }
+
+
+
           const container = document.getElementById('entries');
+
+          let randLine1 = line1[Math.floor(Math.random() * data.length)];
+          let randLine2 = line2[Math.floor(Math.random() * data.length)];
+          let randLine3 = line3[Math.floor(Math.random() * data.length)];
+          let randLine4 = line4[Math.floor(Math.random() * data.length)];
+          let randLine5 = line5[Math.floor(Math.random() * data.length)];
+          let randLine6 = line6[Math.floor(Math.random() * data.length)];
+
+
+          const div = document.createElement('div');
+            div.className = 'entry';
+  
+            div.innerHTML = `
+              <p class="sLine">${randLine1}</p>
+              <p class="sLine">${randLine2}</p>
+              <p class="sLine">${randLine3}</p>
+              <p class="sLine">${randLine4}</p>
+              <p class="sLine">${randLine5}</p>
+              <p class="sLine">${randLine6}</p>
+            `;
+  
+            container.appendChild(div);
+
+
+
+          /*
+
           data.forEach(entry => {
             const div = document.createElement('div');
             div.className = 'entry';
@@ -61,6 +105,7 @@
   
             container.appendChild(div);
           });
+          */
         } catch (err) {
           console.error('Failed to load data:', err);
         }

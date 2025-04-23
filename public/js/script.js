@@ -29,8 +29,8 @@ function rainKeyword(word) {
       spanHolder = span;
 
       // Clean up after animation
-      setTimeout(() => span.remove(), duration * 500);
-    }, 100);
+      setTimeout(() => span.remove(), duration * 1000);
+    }, 500);
   }
 
 function clearOldDrops() {
