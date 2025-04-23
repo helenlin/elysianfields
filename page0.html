@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head> 
+       <link rel="stylesheet" type="text/css" href="public/css/style.css">
+         <meta name="viewport" content="width=device-width">
+         <meta name="viewport" content="height=device-height">
+         <title>waiting room</title>
+         <link rel="icon" href="favicon.png">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                transition: background-color 0.3s ease;
+            }
+
+            .tooltip {
+                position: absolute;
+                background: white;
+                border: 2px solid #00ff00;
+                border-radius: 10px;
+                padding: 10px 15px;
+                font-size: 14px;
+                color: #333;
+                pointer-events: none;
+                transform: translate(-50%, -50%);
+                transition: top 0.05s, left 0.05s;
+                width: 30vw;
+            }
+
+            .ripple {
+            position: absolute;
+            width: 100vw;
+            height: 100vw;
+            background: yellow; 
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            animation: ripple 3.6s ease-out forwards;
+            pointer-events: none;
+            }
+
+            @keyframes ripple {
+            to {
+                transform: translate(-50%, -50%) scale(10);
+                opacity: 0;
+            }
+            }
+        </style>
+    </head>
+    
+
+    <body>
+
+        <br><br>
+         
+    <div class="tooltip" id="tooltip">
+        take ten deep breaths. then click.
+      </div>
+
+
+    <!--<a id="myLink" href="page1.html">next page</a>-->
+
+
+    <script src="public/js/poems.js"></script>
+    <script src="public/js/script.js"></script>
+
+    <script>
+
+        const tooltip = document.getElementById('tooltip');
+
+        document.addEventListener('mousemove', (e) => {
+            tooltip.style.left = `${e.clientX}px`;
+            tooltip.style.top = `${e.clientY}px`;
+        });
+
+
+        setTimeout(() => {
+
+            document.addEventListener('click', (e) => {
+                const ripple = document.createElement('div');
+                ripple.className = 'ripple';
+                ripple.style.left = `${e.clientX}px`;
+                ripple.style.top = `${e.clientY}px`;
+                document.body.appendChild(ripple);
+
+                // Remove after animation ends
+                ripple.addEventListener('animationend', () => {
+                ripple.remove();
+                });
+                setTimeout(() => {
+                    window.location.href = "page1.html";
+                }, 4000);
+            });
+        }, 10000);
+
+    </script>
+    </body>
+
+</html>
