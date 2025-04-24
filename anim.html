@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head> 
+       <link rel="stylesheet" type="text/css" href="public/css/style.css">
+         <meta name="viewport" content="width=device-width">
+         <meta name="viewport" content="height=device-height">
+         <title>elysian fields ii</title>
+         <link rel="icon" href="favicon.png">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                transition: background-color 0.3s ease;
+                background-color: white;
+                color: blue;
+            }
+
+            #myLink {
+                top: 50px;
+                right: 50px;
+            }
+            
+            
+        </style>
+    </head>
+    
+
+    <body>
+
+        <h2 id="pageAnimTitle">buffering</h2>
+
+        <br><br>      
+            
+        <p>. . . . . .</p>
+
+
+    <div class="follower" id="follower"></div>
+    
+    <a id="myLink" href="form.html">next page</a>
+    <script src="public/js/poems.js"></script>
+    <script src="public/js/script.js"></script>
+
+    <script>
+
+
+        const follower = document.getElementById('follower');
+
+        document.addEventListener('mousemove', (e) => {
+        follower.style.left = `${e.clientX}px`;
+        follower.style.top = `${e.clientY}px`;
+        });
+    </script>
+    </body>
+
+</html>
